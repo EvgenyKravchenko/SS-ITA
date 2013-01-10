@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<library xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-xs:noNamespaceSchemaLocation="schema.xsd">
+<!DOCTYPE library [
+<!ELEMENT library (book+)>
+<!ELEMENT book (title, author+, description, price?, isbn*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+]>
+<library>
 	<book>
-        <title lang="ru">Гибкая разработка веб-приложений в среде Rails</title>
-		<title lang="en">Agile Web Development with Rails</title>
+		<title>Гибкая разработка веб-приложений в среде Rails</title>
 		<author>Сэм Руби</author>
 		<author>Дэйв Томас</author>
 		<author>Дэвид Хэнссон</author>
 		<description>Эта книга, уже давно ставшая настольной по изучению Ruby on Rails, предназначена для всех программистов, собирающихся создавать и развертывать современные веб-приложения. Из первой части книги вы получите начальное представление о языке Ruby и общие сведения о самой среде Rails. Далее на примере создания интернет-магазина вы изучите концепции, положенные в основу Rails. В третьей части рассматривается вся экосистема Rails: ее функции, возможности и дополнительные модули. Четвертое издание книги описывает работу с Rails 3.1 и Ruby 1.9.2.
 		</description>
-		<store>
-        	<price>1000</price>
-			<available>нет в наличии</available>
-		</store>
+		<price>1000</price>
+		<isbn>978-5-459-00312-3</isbn>
 	</book>
 
 	<book>
-		<title lang="ru">jQuery для профессионалов</title>
-		<title lang="en">jQuery for professionals</title>
+		<title>jQuery для профессионалов</title>
 		<author>Адам Фримен</author>
 		<description>Освойте искусство веб-разработки с помощью jQuery. В книге раскрываются наиболее эффективные приемы работы с библиотекой jQuery, владение которыми позволяет значительно упростить процесс разработки. Будет показано, как создавать профессиональные веб-приложения с меньшими усилиями и при меньшем размере кода. Обучение начинается с базового примера, после чего шаг за шагом демонстрируется, как добавлять в приложения основные функциональные возможности библиотеки jQuery.
 		</description>
-		<store>
-			<price>1341.50</price>
-			<available>на складе</available>
-		</store>
+		<price>1341</price>
+		<isbn>978-5-8459-1799-7</isbn>
+		<isbn>978-1-4302-4095-2</isbn>
 	</book>
 
 	<book>
-		<title lang="en">Professional Apache</title>
+		<title>Professional Apache</title>
 		<author>Питер Уэйнрайт</author>
 		<description>Эта книга предназначена для тех, кто хочет максимально эффективно использовать возможности web-сервера Apache, если вашей задачей является установка Apache или переход к существующему web-сайту на выделенной машине. Книга содержит сведения о добавлении к существующим серверам таких средств, как система безопасности, РНР и поддержка серверных средств Java. 
 Автор, основываясь на своем опыте работы в реальных условиях, рассказывает о сложностях и деталях Apache.
 		</description>
-		<store>
-			<price>630</price>
-			<available>на складе</available>
-		</store>
+		<price>630</price>
 	</book>
 	
 	<book>
-		<title lang="ru">На берегу</title>
-		<title lang="en">On Beach</title>
+		<title>На берегу</title>
 		<author>Невил Шют</author>
 		<description>В 1964 году ядерная война стирает с лица земли население северного полушария. Одна американская субмарина находит временную зону безопасности в Австралии. Командир субмарины Дуайт Тауэрс, семья которого стала жертвой чудовищной войны, встречает здесь женщину, которая пробуждает в нем уже как будто навсегда умершее чувство любви. Его избранница — Мойра Довайдсон — измучена заботами и все свободное время проводит с бутылкой бренди. Смогут ли они быть счастливы на фоне угасания последнего оазиса жизни?
 		</description>

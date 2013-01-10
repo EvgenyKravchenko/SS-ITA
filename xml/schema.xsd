@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="library" type="library" />
+    <xs:element name="book" type="book" />
+  
+  <xs:complexType name="library">
+    <xs:sequence>
+        <xs:element ref="book" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="book">
+    <xs:sequence>
+      	<xs:element name="title" type="title_type" maxOccurs="unbounded" />
+        <xs:element name="author" type="xs:string" maxOccurs="unbounded" />
+        <xs:element name="description" type="xs:string"  />
+        <xs:element name="store" type="store" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="title_type"  >
+  	<xs:complexContent>
+        <xs:extension base='empty'>
+          <xs:attribute name="lang" type="lang_type" use="required" />
+        </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="avail_type" >
+  	<xs:restriction base="xs:string" >
+  		<xs:enumeration value="на складе" />
+  		<xs:enumeration value="нет в наличии" />
+  	</xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="lang_type" >
+  	<xs:restriction base="xs:string" >
+  		<xs:length value="2" />
+  		<xs:pattern value="[a-z]*" />
+  	</xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="store">
+  	<xs:sequence>
+  		<xs:element name="price" type="xs:decimal" />
+        <xs:element name="available" type="avail_type"  />
+    </xs:sequence>
+  </xs:complexType>
+
+  
+  <xs:complexType name="empty" mixed="true">
+  	<xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+
+  
+</xs:schema>
