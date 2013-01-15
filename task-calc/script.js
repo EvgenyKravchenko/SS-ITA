@@ -4,7 +4,7 @@ window.onload = function() {
     document.getElementById("mul").addEventListener('click', calculate, false);
     document.getElementById("div").addEventListener('click', calculate, false);
     document.getElementById("result").readOnly = true;
-    dis = new Array(0,0);
+    disableArray = new Array(0,0);
     checkValues(document.getElementById("operand1"), 0);
 }
 
@@ -13,6 +13,11 @@ function calculate() {
     var op1, op2;
     op1 = Number(document.getElementById("operand1").value);
     op2 = Number(document.getElementById("operand2").value);
+
+    function process(result, action) {
+        document.getElementById("action").innerText = action;
+        document.getElementById("result").value = (result === Infinity || isNaN(result) === true) ? 'Div by zero!': result.toFixed(2);
+    }
 
     var action = this.innerText;
     switch (action) {
@@ -25,26 +30,15 @@ function calculate() {
 }
 
 
-function process(result, action) {
-    document.getElementById("action").innerText = action;
-
-    document.getElementById("result").value = (result === Infinity) ? 'Div by zero!': result.toFixed(2);
-
-}
-
-
-
-
-
 function checkValues(obj, tag){
 
     var regex = new RegExp(/^(?:\d+(?:\.\d+)?)$/);
     if (regex.test(obj.value) || obj.value === '') {
         obj.className = '';
-        dis[tag] = 1;
+        disableArray[tag] = 1;
     } else {
         obj.className = 'wrong';
-        dis[tag] = 0;
+        disableArray[tag] = 0;
     }
 
 
@@ -55,7 +49,7 @@ function checkValues(obj, tag){
         document.getElementById('div').disabled = state;
     }
 
-    if (dis[0] === 1 && dis[1] === 1 && obj.value !== '') {
+    if (disableArray[0] === 1 && disableArray[1] === 1 && obj.value !== '') {
         setState(false);
     } else {
         setState(true);

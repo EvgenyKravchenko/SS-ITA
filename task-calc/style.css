@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Monda);
 
 body {
-    font-family: Monda;
+    font-family: Monda, "DejaVu Sans";
 }
 
 input {
@@ -32,8 +32,6 @@ input {
 	width: 40px;
     font-size: 170%;
     display: inline;
-
-
 }
 
 #result {
