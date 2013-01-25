@@ -6,6 +6,10 @@ window.onload = function() {
     document.getElementById("result").readOnly = true;
     disableArray = new Array(0,0);
     checkValues(document.getElementById("operand1"), 0);
+    document.getElementById("operand1").addEventListener('keyup', function(){checkValues(this,0)}, false);
+    document.getElementById("operand1").addEventListener('keyup', function(){checkValues(this,1)}, false);
+
+
 }
 
 
