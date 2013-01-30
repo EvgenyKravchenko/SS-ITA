@@ -32,8 +32,8 @@ window.onload = function() {
     }
 
     this.get_values = function() {
-      this.operand1 = Number(document.getElementById("operand1").value);
-      this.operand2 = Number(document.getElementById("operand2").value);
+      this.operand1 = parseFloat(document.getElementById("operand1").value);
+      this.operand2 = parseFloat(document.getElementById("operand2").value);
     }
 
     this.view_result = function() {
@@ -48,7 +48,7 @@ window.onload = function() {
   }
 
 
-    calc = new Calc();
+    var calc = new Calc();
     
     document.getElementById("add").addEventListener('click', function(){calc.add();}, false);
     document.getElementById("sub").addEventListener('click', function(){calc.sub();}, false);
