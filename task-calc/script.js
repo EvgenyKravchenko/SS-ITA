@@ -44,7 +44,8 @@ window.onload = function() {
     this.validate_result = function() {
       this.result = (this.result === Infinity || isNaN(this.result) === true) ? 'Div by zero!': this.result.toFixed(2);
     }
-
+    
+    return this;
   }
 
 
