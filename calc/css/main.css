@@ -1,0 +1,126 @@
+@import url(http://fonts.googleapis.com/css?family=Monda);
+
+body {
+    font-family: Monda, "DejaVu Sans";
+}
+
+input {
+	font-family: inherit;
+}
+
+.center {
+	text-align: center;	
+}
+
+.center-marg {
+	margin: 0 auto;
+	display: table;
+}
+
+#wrap {
+	width: 40%;
+	margin: 5% auto;
+}
+
+#container {
+	display: table;
+	margin: 0 auto;
+}
+
+#action {
+  /*margin: 0 10px;
+	/*width: 40px;*/
+  font-size: 170%;
+  display: inline;
+}
+
+#buttons {
+  margin: 20px 10px;
+  width: 130px;
+  display: block;
+  float: left;
+  font-size: 120%;
+  
+}
+
+
+
+.clear {
+  clear: both;
+}
+
+.numbers-div {
+  padding: 5px 5px;
+  background: #e3e3e3;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  
+  height: 25px;
+  margin: 5px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: default;
+}
+
+.actions-div {
+  padding: 5px 5px;
+  background: #e3e3e3;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  
+  height: 25px;
+  margin: 5px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: default;
+}
+
+
+.fl {
+  float: left;
+}
+
+.number0 {
+  margin: 0 32%;
+}
+
+.div0 {
+  margin: 0 34%;
+}
+.numbers {
+  padding: 5px 10px;
+}
+
+#container_buttons {
+  border: 2px solid white;
+}
+
+#result {
+	margin-top: 15px;
+}
+
+#actions {
+	margin: 20px auto;
+	display: table;
+}
+
+
+#actions button {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-size: 130%;
+	width: 50px;
+}
+
+
+#toggleSkin {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+}
+
+.wrong {
+    border: 2px solid red;
+}
