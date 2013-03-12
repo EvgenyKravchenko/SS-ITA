@@ -1,0 +1,10 @@
+table, tr, td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+#buttons {
+  position: absolute;
+  left:50px;
+  bottom: 100px;
+}
