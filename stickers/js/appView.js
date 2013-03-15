@@ -11,7 +11,7 @@ var AppView = Backbone.View.extend({
       stickerList.bind("add", this.addSticker, this);
       stickerList.bind("reset", this.loadStickers, this);
       stickerList.fetch();
-
+      stickerList.correctCountItems();
     },
 
     addSticker: function(model) {
