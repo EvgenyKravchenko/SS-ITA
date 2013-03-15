@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Stickers!</title>
+  <link rel="stylesheet" href="css/main.css"/>
+
+
+</head>
+
+<body>
+  
+  <h1 class='center'>Sticker Board</h1>
+
+  <div id="credits">
+    Created by krava
+  </div>
+  <div id="sticker-board"></div>
+ 
+  <div id="delete">
+    <img src="img/recycle.png" id="delete-img">
+  </div>
+  <div id="hint">Drag and drop stickers to trash for delete</div>
+  
+
+  <script src="js/core/json2.js"></script>
+  <script src="js/core/jquery-1.9.1.js"></script>
+  <script src="js/core/underscore.js"></script>
+  <script src="js/core/backbone.js"></script>
+  <script src="js/core/backbone-localstorage.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+  <script src="js/sticker.js"></script>
+  <script src="js/stickerCollection.js"></script>
+  <script src="js/stickerView.js"></script>
+  <script src="js/deleteView.js"></script>
+  <script src="js/appView.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Templates -->
+
+  <script type="text/template" id="sticker-template">
+    <div class="sticker" id="<%= id %>">
+      <label class="view"><%= title %></label>
+      <div class="editdiv">
+        <input class="edit" type="text" value="<%= title %>" />
+      </div>
+    </div>
+  </script>
+
+  </body>
+</html>
